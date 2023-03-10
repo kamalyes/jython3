@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.kamalyes</groupId>
+  <artifactId>jython3</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <url>http://yuyanqing.cn</url>
+
+  <description>
+        Jython is an implementation of the high-level, dynamic, object-oriented
+        language Python3 written in 100% Pure Java, and seamlessly integrated with
+        the Java platform. It thus allows you to run Python on any Java platform.
+  </description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencies>
+
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>24.0-jre</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.ibm.icu/icu4j -->
+    <dependency>
+      <groupId>com.ibm.icu</groupId>
+      <artifactId>icu4j</artifactId>
+      <version>72.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.antlr/ST4 -->
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>ST4</artifactId>
+      <version>4.0.8</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.1.68.Final</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.github.jnr/jnr-constants -->
+    <dependency>
+      <groupId>com.github.jnr</groupId>
+      <artifactId>jnr-constants</artifactId>
+      <version>0.9.17</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.github.jnr/jnr-posix -->
+    <dependency>
+      <groupId>com.github.jnr</groupId>
+      <artifactId>jnr-posix</artifactId>
+      <version>3.1.16</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-compress</artifactId>
+      <version>1.22</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.github.jnr/jnr-enxio -->
+    <dependency>
+      <groupId>com.github.jnr</groupId>
+      <artifactId>jnr-enxio</artifactId>
+      <version>0.32.14</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.github.jnr/jnr-unixsocket -->
+    <dependency>
+      <groupId>com.github.jnr</groupId>
+      <artifactId>jnr-unixsocket</artifactId>
+      <version>0.38.19</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.jcraft/jzlib -->
+    <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jzlib</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.10.13</version>
+    </dependency>
+
+    <!-- 以下jar比较久远，引入本地lib包 -->
+    <dependency>
+      <groupId>org.objectweb.asm</groupId>
+      <artifactId>asm</artifactId>
+      <version>5.1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/asm-5.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>org.objectweb.asm</groupId>
+      <artifactId>asm-commons</artifactId>
+      <version>5.1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/asm-commons-5.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>org.objectweb.asm</groupId>
+      <artifactId>asm-tree</artifactId>
+      <version>5.1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/asm-tree-5.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>org.objectweb.asm</groupId>
+      <artifactId>asm-util</artifactId>
+      <version>5.1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/asm-util-5.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>jline</groupId>
+      <artifactId>jline</artifactId>
+      <version>2.12.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/jline-2.12.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.kenai.jffi</groupId>
+      <artifactId>jffi</artifactId>
+      <version>1.2.12</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/jffi-1.2.12.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>antlr-runtime</artifactId>
+      <version>3.4</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/antlr-runtime-3.4.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>antlr-complete</artifactId>
+      <version>3.4</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/libs/antlr-3.4-complete.jar</systemPath>
+    </dependency>
+
+
+  </dependencies>
+  <!-- Just put my name in for now to make the maven uploader happy -->
+  <developers>
+    <developer>
+      <id>kamalyes</id>
+      <name>Kamalyes</name>
+    </developer>
+  </developers>
+</project>
